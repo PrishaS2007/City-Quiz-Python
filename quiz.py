@@ -58,7 +58,7 @@ def quiz():
     
     # Loop through each question
     for i, q in enumerate(questions):
-        print(f"Question{i+1}: {q['question']}")
+        print(f"Question {i+1}:\n{q['question']}")
         for j, option in enumerate(q["options"]):
             print(f"  {option_labels[j]}) {option}")
         
@@ -74,8 +74,8 @@ def quiz():
     
     # Scoring
     print(f"You scored {score} out of 10.")
-    percentage = (score / 10) * 100
-    print(f"Your percentage is {percentage:.2f}%.")
+    percentage = int((score / 10) * 100)
+    print(f"Your percentage is {percentage}%.")
 
     # Encouragement Message
     if percentage == 100:
